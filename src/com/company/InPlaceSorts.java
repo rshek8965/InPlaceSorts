@@ -2,7 +2,7 @@ package com.company;
 
 public class InPlaceSorts {
 
-    public static void swap(int[]arr. int i, int j)
+    public static void swap(int[]arr, int i, int j)
     {
         int temp = arr[i];
         arr[i]=arr[j];
@@ -20,7 +20,7 @@ public class InPlaceSorts {
                 if (list1[j-1]>list1[j])
                 {
                     //if element at j-1 is greater than element at j, swap them
-                    swap(list1, j-1, j)
+                    swap(list1, j-1, j);
                 }
                 else
                 {
@@ -31,7 +31,7 @@ public class InPlaceSorts {
         }
     }
 
-    public static void selectionSort(double[] list1)
+    public static void selectionSort(int[] list1)
     {
         //declare two ints for remembering the position we are swapping into, and the current minimum, initialize them to 0
         int pos = 0;
@@ -43,7 +43,8 @@ public class InPlaceSorts {
             pos = i;
             currentMin = list1[i];
             //if you find a number less than the min, set swap position and current minimum
-            for (int j=j+1; j<list1.length;j++)
+            int j=pos;
+            for (j=j+1; j<list1.length;j++)
             {
                 //if element at j-1 is greater than element at j, swap them
                 if (list1[j]<currentMin)
@@ -56,7 +57,7 @@ public class InPlaceSorts {
         }
     }
 
-    public static void bubbleSort(String[] list1)
+    public static void bubbleSort(int[] list1)
     {
         //Declare an int to keep track of the number of swaps, initialize it to 1
         int swapCount=1;
