@@ -12,7 +12,7 @@ public class InPlaceSorts {
     public static void insertionSort(int[] list1)
     {
         //loop through the entire array, use an index i
-        for (int i = 0; i < list1.length-1; i++)
+        for (int i = 0; i < list1.length; i++)
         {
             //loop from index i back to the beginning of the array, use index j
             for (int j = i; j>0; j--)
@@ -59,24 +59,17 @@ public class InPlaceSorts {
 
     public static void bubbleSort(int[] list1)
     {
-        //Declare an int to keep track of the number of swaps, initialize it to 1
-        int swapCount=1;
-        // While swap does not equal 0
-        while (swapCount!=0)
+        for(int k = 0; k < list1.length; k++)
         {
-            //set the swap count to 0 for each run through the array
-            swapCount=0;
-            //Loop through the entire array
-            for (int i=0; i<list1.length; i++)
+            for (int i=0; i<list1.length-1; i++)
             {
-                if (list1[i]>list1[i+1])
+                if (list1[i] > list1[i+1])
                 {
-                    //if you find any two elements out of order, swap them and add one to the swap count
-                    swap(list1, i, i+1);
-                    swapCount++;
+                    int temp = list1[i];
+                    list1[i] = list1[i+1];
+                    list1[i+1] = temp;
                 }
             }
-
         }
     }
 
