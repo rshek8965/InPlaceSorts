@@ -12,10 +12,10 @@ public class InPlaceSorts {
     public static void insertionSort(int[] list1)
     {
         //loop through the entire array, use an index i
-        for (int i = 0; i < list1.length; i++)
+        for (int i = 0; i < list1.length-1; i++)
         {
             //loop from index i back to the beginning of the array, use index j
-            for (int j = i; i>0; j--)
+            for (int j = i; j>0; j--)
             {
                 if (list1[j-1]>list1[j])
                 {
