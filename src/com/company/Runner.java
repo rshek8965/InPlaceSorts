@@ -15,5 +15,6 @@ public class Runner {
         InPlaceSorts.insertionSort(arr);
         InPlaceSorts.selectionSort(arr);
         InPlaceSorts.bubbleSort(arr);
+        InPlaceSorts.quickSort(arr, 1, 3);
     }
 }
